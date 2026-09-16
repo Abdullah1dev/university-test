@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Achievement</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+            padding: 50px;
+        }
+
+        .achievement-card {
+            position: relative;
+
+            background-color: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 30px;
+
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .badge {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            background-color: #222;
+            color: white;
+
+            padding: 8px 15px;
+
+            border-radius: 0 10px 0 10px;
+        }
+
+        .achievement-card h1 {
+            margin-top: 10px;
+        }
+
+        .achievement-card h2 {
+            color: #444;
+        }
+
+        .date {
+            color: #777;
+        }
+
+        /* Decorative line */
+        .achievement-card h2::after {
+            content: "";
+
+            display: block;
+
+            width: 60px;
+            height: 3px;
+
+            background-color: #222;
+
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="achievement-card">
+
+        <div class="badge">
+            Featured
+        </div>
+
+        <h1>Abdullah Tahir</h1>
+
+        <h2>Best Software Project Award</h2>
+
+        <p>
+            Received an achievement for developing an innovative
+            software project during the university project competition.
+        </p>
+
+        <p class="date">
+            Achievement Date: September 10, 2026
+        </p>
+
+    </div>
+
+</body>
+</html>
