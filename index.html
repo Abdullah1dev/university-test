@@ -1,113 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Student Profile</title>
+    <meta charset="UTF-8">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 40px;
-        }
+    <title>Student Academic & Scholarship Management</title>
 
-        .profile {
-            background-color: white;
-            max-width: 900px;
-            margin: auto;
-            padding: 30px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-
-            flex-wrap: wrap;
-        }
-
-        .profile img {
-            width: 250px;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .profile-info {
-            flex: 1;
-        }
-
-        .profile-info h1 {
-            margin-bottom: 10px;
-        }
-
-        .profile-info h3 {
-            color: #555;
-        }
-
-        .skills {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .skill {
-            background-color: #222;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-        }
-
-        @media (max-width: 600px) {
-
-            .profile {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile img {
-                width: 180px;
-                height: 180px;
-            }
-
-            .skills {
-                justify-content: center;
-            }
-        }
-    </style>
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="profile">
+    <h1>Student Academic & Scholarship Management</h1>
 
-        <img src="student.jpg" alt="Student Image">
+    <!-- Student Academic Profile -->
+    <section id="studentProfile">
 
-        <div class="profile-info">
+        <h2>Student Academic Profile</h2>
 
-            <h1>Abdullah Tahir</h1>
+        <p><strong>Name:</strong> <span id="studentName"></span></p>
 
-            <h3>BS Software Engineering</h3>
+        <p><strong>Registration No:</strong> <span id="registrationNumber"></span></p>
 
-            <p>
-                I am a passionate software engineering student interested
-                in web development, Python and artificial intelligence.
-            </p>
+        <p><strong>Program:</strong> <span id="program"></span></p>
 
-            <h3>Skills</h3>
+        <p><strong>Semester:</strong> <span id="semester"></span></p>
 
-            <div class="skills">
-                <div class="skill">Python</div>
-                <div class="skill">HTML/CSS</div>
-                <div class="skill">Django</div>
-            </div>
+        <p><strong>CGPA:</strong> <span id="cgpa"></span></p>
 
-        </div>
+        <p><strong>Attendance:</strong> <span id="attendance"></span>%</p>
 
-    </div>
+    </section>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
