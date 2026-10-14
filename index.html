@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Student Academic & Scholarship Management</title>
 
-    <!-- Connect CSS -->
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -17,24 +16,153 @@
 
     <!-- Student Academic Profile -->
     <section id="studentProfile">
-
         <h2>Student Academic Profile</h2>
 
-        <p><strong>Name:</strong> <span id="studentName"></span></p>
-
-        <p><strong>Registration No:</strong> <span id="registrationNumber"></span></p>
-
-        <p><strong>Program:</strong> <span id="program"></span></p>
-
-        <p><strong>Semester:</strong> <span id="semester"></span></p>
-
-        <p><strong>CGPA:</strong> <span id="cgpa"></span></p>
-
-        <p><strong>Attendance:</strong> <span id="attendance"></span>%</p>
-
+        <p><strong>Name:</strong> <span id="studentName">Azlan Sameer</span></p>
+        <p><strong>Registration No:</strong> <span id="registrationNumber">242800</span></p>
+        <p><strong>Program:</strong> <span id="program">BS Computer Science</span></p>
+        <p><strong>Semester:</strong> <span id="semester">4th</span></p>
+        <p><strong>CGPA:</strong> <span id="cgpa">3.50</span></p>
+        <p><strong>Attendance:</strong> <span id="attendance">90</span>%</p>
     </section>
 
-    <script src="script.js"></script>
+    <!-- TASK 1: DOM Demonstration -->
+    <section id="dom-demo" class="panel">
+        <h2>JavaScript DOM Demonstration</h2>
+
+        <h3 id="demo-heading">Welcome to My Portfolio</h3>
+
+        <p id="demo-message">
+            This paragraph will change when you click the buttons.
+        </p>
+
+        <div class="button-group">
+            <button type="button" id="change-text-btn">Change Message</button>
+            <button type="button" id="change-style-btn">Change Style</button>
+            <button type="button" id="reset-dom-btn">Reset</button>
+        </div>
+    </section>
+
+    <!-- TASK 2: Manage Technical Skills -->
+    <section id="dynamic-skills" class="panel">
+        <h2>Manage Technical Skills</h2>
+
+        <p>Enter a skill and add it without refreshing the browser.</p>
+
+        <form id="skill-form">
+            <label for="skill-input">Skill Name</label>
+
+            <input
+                type="text"
+                id="skill-input"
+                placeholder="e.g., React.js"
+                minlength="2"
+                maxlength="30"
+                required
+            >
+
+            <div id="skill-error" class="error" aria-live="polite"></div>
+
+            <button type="submit">Add Skill</button>
+        </form>
+
+        <h3>My Skills</h3>
+
+        <ul id="dynamic-skill-list">
+            <li>
+                <span>HTML5</span>
+                <button type="button" class="remove-btn">Remove</button>
+            </li>
+            <li>
+                <span>CSS3</span>
+                <button type="button" class="remove-btn">Remove</button>
+            </li>
+            <li>
+                <span>JavaScript</span>
+                <button type="button" class="remove-btn">Remove</button>
+            </li>
+        </ul>
+    </section>
+
+    <!-- TASK 3: Student Registration Form -->
+    <section id="registration-section" class="panel">
+        <h2>Student Registration Form</h2>
+
+        <form id="registration-form">
+
+            <label for="full-name">Full Name</label>
+            <input
+                type="text"
+                id="full-name"
+                placeholder="Enter your full name"
+                minlength="3"
+                maxlength="50"
+                required
+            >
+            <div id="name-feedback" class="feedback" aria-live="polite"></div>
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="example@email.com"
+                maxlength="100"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="At least 8 characters"
+                minlength="8"
+                maxlength="30"
+                required
+            >
+            <div id="password-feedback" class="feedback" aria-live="polite"></div>
+
+            <label for="department">Department</label>
+            <select id="department" required>
+                <option value="">Select Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+            </select>
+
+            <button type="submit">Register Student</button>
+        </form>
+
+        <div id="registration-result" aria-live="polite"></div>
+    </section>
+
+    <!-- ADDITIONAL TASK 1: Count Dropdown Items -->
+    <section class="panel">
+        <h2>Count Dropdown Items</h2>
+        <p>Count the available department options.</p>
+        <button type="button" id="count-options-btn">Count Departments</button>
+    </section>
+
+    <!-- ADDITIONAL TASK 2: Random Image -->
+    <section class="panel">
+        <h2>Random Image Display</h2>
+
+        <button type="button" id="random-image-btn">Show Random Image</button>
+
+        <div class="image-container">
+            <img id="random-image" src="" alt="Randomly selected image" hidden>
+        </div>
+    </section>
+
+    <!-- ADDITIONAL TASK 3: Window Dimensions -->
+    <section class="panel">
+        <h2>Window Resize Dimensions</h2>
+
+        <p>Resize your browser window to see the dimensions update.</p>
+
+        <p>Width: <span id="window-width"></span> pixels</p>
+        <p>Height: <span id="window-height"></span> pixels</p>
+    </section>
 
 </body>
 </html>
